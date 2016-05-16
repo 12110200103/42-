@@ -1,0 +1,145 @@
+DROP database IF EXISTS mrs;
+create database mrs;
+use mrs;
+
+#============================ user ============================
+create table t_user(
+  	account varchar(11) not null primary key,
+	nickname varchar(15),
+	password varchar(32),
+	role_type int default 1,
+    validate int default 0,    
+    record_time timestamp
+); 
+create trigger t_user_on_delete before delete on t_user for each row
+begin
+    delete from t_video_multi where user_account=old.account;     
+end;
+
+#super manager init
+insert into t_user (account, nickname, password, role_type, validate) value('root', 'root', 'root', 0, 1);
+
+#============================ video ============================
+create table t_video_type(
+	id int not null primary key auto_increment,
+ 	name varchar(50),
+	level int,
+ 	record_time timestamp
+);
+
+insert into t_video_type (name, level) values ("视频", 0);
+insert into t_video_type (name, level) values ("电影", 0);
+insert into t_video_type (name, level) values ("电视剧", 0);
+insert into t_video_type (name, level) values ("动漫", 0);
+insert into t_video_type (name, level) values ("院内", 0);
+
+insert into t_video_type (name, level) values ("教育", 1);
+insert into t_video_type (name, level) values ("综艺", 1);
+insert into t_video_type (name, level) values ("爱情", 1);
+insert into t_video_type (name, level) values ("动作", 1);
+insert into t_video_type (name, level) values ("冒险", 1);
+insert into t_video_type (name, level) values ("古装", 1);
+insert into t_video_type (name, level) values ("喜剧", 1);
+insert into t_video_type (name, level) values ("悬疑", 1);
+insert into t_video_type (name, level) values ("科幻", 1);
+insert into t_video_type (name, level) values ("魔幻", 1);
+insert into t_video_type (name, level) values ("恐怖", 1);
+insert into t_video_type (name, level) values ("灾难", 1);
+insert into t_video_type (name, level) values ("文艺", 1);
+insert into t_video_type (name, level) values ("音乐", 1);
+insert into t_video_type (name, level) values ("其他", 1);
+
+insert into t_video_type (name, level) values ("大陆", 2);
+insert into t_video_type (name, level) values ("香港", 2);
+insert into t_video_type (name, level) values ("台湾", 2);
+insert into t_video_type (name, level) values ("美国", 2);
+insert into t_video_type (name, level) values ("日本", 2);
+insert into t_video_type (name, level) values ("韩国", 2);
+insert into t_video_type (name, level) values ("欧洲", 2);
+insert into t_video_type (name, level) values ("英国", 2);
+insert into t_video_type (name, level) values ("印度", 2);
+insert into t_video_type (name, level) values ("泰国", 2);
+insert into t_video_type (name, level) values ("其他", 2);
+
+create table t_file(
+ 	id varchar(32) not null primary key ,
+	is_local_file int default 1, #0:false 1:true
+ 	length int,
+	mime varchar(50),
+ 	path varchar(255),
+ 	record_time timestamp
+);
+
+create table t_video_multi(
+	id int not null primary key auto_increment,
+	user_account varchar(11),
+	is_recommend int default 0,
+	is_top int default 0,
+	name varchar(30),
+	director varchar(255),
+	actors varchar(255),#以逗号分隔
+	type_level_0 int,
+	type_level_1 varchar(255),
+	type_level_2 int,
+    preview varchar(255),
+	introduce varchar(1024),
+	release_time int,
+	score int, #0-10
+	click_count int default 0,
+    validate int default 1,
+	record_time timestamp,
+	
+	constraint foreign key(user_account) references t_user(account)
+);
+
+create trigger t_video_multi_on_delete before delete on t_video_multi for each row
+begin
+    delete from t_video_part where multi_id=old.id;
+end;
+
+
+create table t_video_part(
+	id int not null primary key auto_increment,
+	multi_id int,
+	file_id varchar(32),
+	episode_id int default 0,# 0:一部
+	record_time timestamp,
+	
+	constraint foreign key(multi_id) references t_video_multi(id),
+	constraint foreign key(file_id) references t_file(id)
+); 
+
+create table t_user_file_relation(
+	user_account varchar(11) not null,
+	file_id varchar(32) not null,
+    file_name varchar(255),
+
+	constraint foreign key(user_account) references t_user(account),
+	constraint foreign key(file_id) references t_file(id)
+);
+
+
+#============================ hello world ============================
+create table t_hello_world(
+ 	id int not null primary key auto_increment,
+	mime varchar(50),
+ 	path varchar(255), 
+    external_url varchar(1024),
+ 	validate int default 0,
+ 	record_time timestamp
+);
+
+#============================ environment ============================
+create table t_environment(
+  	var_key varchar(255) not null primary key,
+	var_value varchar(1024)
+);
+
+insert into t_environment values('HOST_STREAM_MEDIA_SERVER_HTTP', 'http://192.168.102.248:9090/mrs');
+insert into t_environment values('HOST_STREAM_MEDIA_SERVER_RTSP', 'rtsp://192.168.102.248:554');
+insert into t_environment values('HOST_DRCOM_CONNECTION', 'http://172.24.254.138');
+insert into t_environment values('HOST_DRCOM_DISCONNECTION', 'http://172.24.254.138/F.html');
+insert into t_environment values('SWITCH_SYSTEM', '1');
+insert into t_environment values('SWITCH_USER_REGISTER', '0');
+insert into t_environment values('SWITCH_NIGHT', '1');
+

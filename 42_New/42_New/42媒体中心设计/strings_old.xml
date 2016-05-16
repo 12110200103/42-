@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">42媒体中心</string>
+    <string name="column_reconmend">首页</string>
+    <string name="column_channel">频道</string>
+    <string name="column_net">网络</string>
+
+    <!-- tag -->
+    <string name="tag_42">42</string>
+    <!-- tag -->
+    
+    <!-- const -->
+    <string name="const_year">年</string>
+    <string name="const_score">分</string>
+    <string name="const_divider">|</string>
+    <!-- const -->
+
+    <!-- msg -->
+    <string name="msg_net_error">网络异常</string>
+    <string name="msg_net_online">你已登录, 42小组为你服务</string>
+    <string name="msg_net_offline">你已经离线, 请注意流量使用</string>
+    <string name="msg_net_server_connect">你已连接42服务器</string>
+    <string name="msg_net_server_disconnect">你已断开42服务器</string>
+    <string name="msg_press_twice_out">再按一次退出</string>
+    <!-- msg -->
+
+	<!-- search -->
+    <string name="search_hint">请输入视频名称</string>
+    <!-- search -->
+
+    <!-- top -->
+    <string name="top_back">返回</string>
+    <!-- top -->
+
+  	<!-- side menu -->
+  	<string name="side_menu_web_nav">校内导航</string>
+    <string name="side_menu_about_team">关于42小组</string>
+    <string name="side_menu_about_software">关于软件</string>
+    <!-- side menu -->
+    
+    
+
+    <!-- home -->
+    <string name="reconmned_hot">热门推荐</string>
+    <string name="reconmned_latest">新片上映</string>
+    <!-- home -->
+
+    <!-- channel -->
+    <string name="channel_page_size">36</string>
+    <string name="channel_span_count">2</string>
+    <string name="channel_sort_latest">最新</string>
+    <string name="channel_sort_hot">最热</string>
+    <string name="channel_sort_score">评分</string>
+    <string name="channel_filter">筛选</string>
+    <string name="channel_type_back">返回上一级</string>
+    <string name="channel_type_type">类型</string>
+    <string name="channel_type_content">内容</string>
+    <string name="channel_type_region">地区</string>
+    <string name="channel_type_all">全部</string>
+    <!-- channel -->
+
+
+    <!-- video_info -->
+    <string name="video_multi_info_release_time">时 间</string>
+    <string name="video_multi_info_detail">详 情</string>
+    <string name="video_multi_info_episode">剧 集</string>
+    <string name="video_multi_info_episode_one">正片</string>
+    <string name="video_multi_info_score">评 分</string>
+    <string name="video_multi_info_director">导 演</string>
+    <string name="video_multi_info_actor">主 演</string>
+    <string name="video_multi_info_type">类 型</string>
+    <string name="video_multi_info_content">内 容</string>
+    <string name="video_multi_info_region">地 区</string>
+    <string name="video_multi_info_introduce">简 介</string>
+    <string name="video_multi_info_watch">播放</string>
+    <string name="video_multi_info_list_span_count">6</string>
+    <!-- video_info -->
+
+    <!-- s net -->
+    <string name="net_host_drcom_connection">/util/drcom/host/connection</string>
+    <string name="net_host_drcom_disconnect">/util/drcom/host/disconnection</string>
+    
+    <!-- <string name="net_host">http://192.168.42.68:8080</string> -->
+	<!-- <string name="net_host">http://192.168.23.1:8080/mrs</string> -->
+    <string name="net_host">http://192.168.1.155:8080/mrs</string>
+    <!-- <string name="net_host">http://172.22.232.139:8080</string> -->
+    <!-- <string name="net_host">http://192.168.252.1:8080</string> -->
+
+    http://120.27.45.44:8080/mrs
+    
+    <string name="net_video_level_type">/video/type</string>
+    <string name="net_video_level_0">/video/level/0</string>
+    <string name="net_video_level_1">/video/level/1</string>
+    <string name="net_video_level_2">/video/level/2</string>
+
+    <string name="net_video_multi_top">/video/multi/top/6/list</string>
+    <string name="net_video_multis">/video/multi/type/?/content/?/region/?/latest/?/hot/?/score/?/page_index/?/page_size/?</string>
+    <string name="net_video_multi_reconmend">/video/multi/recommend/list</string>
+    <string name="net_video_multi_reconmend_hot">/video/multi/type/0/content/0/region/0/latest/0/hot/1/score/0/page_index/0/page_size/4</string>
+    <string name="net_video_multi_reconmend_latest">/video/multi/type/0/content/0/region/0/latest/1/hot/0/score/0/page_index/0/page_size/4</string>
+    
+    <string name="net_video_search">/video/multi/search/?/page_index/0/page_size/10</string>
+    <string name="net_video_search_fuzzy">/video/multi/search_prefix/?/page_index/0/page_size/10</string>
+    
+    <string name="net_video_parts">/video/part/multi/id/</string>
+    <string name="net_video_parts_file">/video/file/id/</string>
+    /video/file/http/id/
+    <string name="net_connection_test">/util/connection</string>
+    
+    <string name="net_helloworld_list">/helloworld/list</string>
+    
+    <string name="net_html_team_info">/html/team_info.html</string>
+    <string name="net_html_software">/html/software.html</string>
+    <string name="net_html_nav">/html/nav.html</string>
+    <!-- e net -->
+
+
+    <!-- s net_helper -->
+    <string name="net_helper_label_account">账 号</string>
+    <string name="net_helper_label_password">密 码</string>
+    <string name="net_helper_account_hint">请输入校园网账号</string>
+    <string name="net_helper_password_hint">请输入校园网密码</string>
+    <string name="net_helper_account_enmpty">校园网账号为空</string>
+    <string name="net_helper_password_enmpty">校园网密码为空</string>
+    <string name="net_helper_label_header">登录你的校园网账号</string>
+    <string name="net_helper_login">登 陆</string>
+    <string name="net_helper_logout">登 出</string>
+    <!-- e net_helper -->
+
+
+    <!-- e player -->
+    <string name="palyer_init_palyer">初始化播放器</string>
+    <string name="palyer_start_get_video_path">开始获取视频播放地址</string>
+    <string name="palyer_end_get_video_path_success">获取视频播放地址成功</string>
+    <string name="palyer_end_get_video_path_fail">获取视频播放地址失败</string>
+    <string name="palyer_cache_video">开始缓冲视频...</string>
+    <string name="palyer_light">亮度</string>
+    <string name="palyer_volume">音量</string>
+    <!-- e player -->
+
+</resources>

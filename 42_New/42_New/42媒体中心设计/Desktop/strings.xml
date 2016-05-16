@@ -1,0 +1,45 @@
+
+    <!-- s net -->
+	<string name="net_host">http://120.27.45.44/mrs</string>
+    
+    <string name="net_host_drcom_connection">/util/drcom/host/connection</string>
+    <string name="net_host_drcom_disconnect">/util/drcom/host/disconnection</string>
+    
+    /**
+     * 视频类型分级
+     */
+    <string name="net_video_level_0">/video/level/0</string>
+    <string name="net_video_level_1">/video/level/1</string>
+    <string name="net_video_level_2">/video/level/2</string>
+
+
+ 
+    获得置顶视频
+    <string name="net_video_multi_top">/video/multi/top/6/list</string>
+
+    
+    1：类型
+    2：内容
+    3：地区
+    4/5/6：排序，只能有一个
+    <string name="net_video_multis">/video/multi/type/?/content/?/region/?/latest/?/hot/?/score/?/page_index/?/page_size/?</string>
+    <string name="net_video_multi_reconmend_love">/video/multi/reconmend/type/0/content/8/region/0/latest/1/hot/0/score/0/page_index/0/page_size/4</string>
+
+    搜索
+    <string name="net_video_search">/video/multi/search/?/page_index/0/page_size/10</string>
+    
+    根据视频的ID拿到剧集列表
+    <string name="net_video_parts">/video/part/multi/id/</string>
+<!--     <string name="net_video_parts_file">/video/file/rtsp/id/</string> -->
+
+    根据剧集里面的文件ID拿播放地址
+	<string name="net_video_parts_file">/video/file/http/id/</string>
+
+    获得欢迎页
+    <string name="net_helloworld_list">/helloworld/list</string>
+    
+    软件信息
+    <string name="net_html_team_info">/html/team_info.html</string>
+    <string name="net_html_software">/html/software.html</string>
+    <string name="net_html_nav">/html/nav.html</string>
+    <!-- e net -->
