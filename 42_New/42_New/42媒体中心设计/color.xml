@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary_color_0">#F7F7F7</color>
+    <color name="primary_color_50">#F1EFF0</color>
+    <color name="primary_color_50_mask">#E5F1EFF0</color>
+    <color name="primary_color_100">#F3C1C3</color>
+    <color name="primary_color_200">#F0ABAE</color>
+    <color name="primary_color_300">#ED9498</color>
+    <color name="primary_color_400">#ED797E</color>
+    <color name="primary_color_500">#EB5E64</color>
+    <color name="primary_color_600">#EB4A51</color>
+    <color name="primary_color_700">#DB3A41</color>
+    <color name="primary_color_800">#C3292F</color>
+    <color name="primary_color_900">#AA1D22</color>
+    
+    <color name="primary_color_grey_50">#FAFAFA</color>  
+    <color name="primary_color_grey_100">#F5F5F5</color>  
+    <color name="primary_color_grey_200">#EEEEEE</color>  
+    <color name="primary_color_grey_300">#E0E0E0</color>  
+    <color name="primary_color_grey_400">#BDBDBD</color>  
+    <color name="primary_color_grey_500">#9E9E9E</color>  
+    <color name="primary_color_grey_600">#757575</color>  
+    <color name="primary_color_grey_700">#616161</color>  
+    <color name="primary_color_grey_800">#424242</color>  
+    <color name="primary_color_grey_900">#212121</color>  
+    <color name="primary_color_grey_1000">#000000</color>  
+    
+
+    <color name="primary_color_red">#E51C23</color>
+    
+    <color name="main_text_title_color_dark">#000000</color>
+    <color name="main_text_title_color_light">#8F8C8C</color>
+    <color name="main_text_title_color_lighter">#BDBDBD</color>
+    <color name="main_text_title_color">#585151</color>
+    
+    <color name="layout_main_tab_background">#ECEAEB</color>
+    <color name="layout_channel_content_drawer_background">#E5E3DDDD</color>
+    
+    <color name="app_msg_background">#FFFFCC</color>
+    
+    <color name="main_mask_light">#00EEEEEE</color>
+    <color name="main_mask">#99000000</color>
+
+</resources>
